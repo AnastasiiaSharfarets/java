@@ -1,0 +1,9 @@
+# как гигить
+
+1. создаем не пустой файл
+2. git status
+3. git add src/lesson24/HW24.java или git add .
+4. git status
+5. надо закоммитить: git commit -m "Git introdaction and homework23"
+6. отправляем на github: git push origin main
+7. заходим на github
