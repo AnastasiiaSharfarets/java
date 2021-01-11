@@ -11,20 +11,40 @@ public class HW25WhileDoWhile {
     }
 
     private static void printFromAtoB(int a, int b) {
-        int i = a + 1;
+        for (int i = a + 1; i < b; i++) {
+            System.out.print(i + " ");
+        }
+        /*do {
+            System.out.print(a + " ");
+            ;
+            a++;
+        } while (a < b);*/
+        /*int i = a + 1;
         while (i < b) {
             System.out.print(i + ", ");
             i++;
-        }
+        }*/
     }
 
     private static void printBAtimes(int a, int b) {
-        int i = 0;
+        do {
+            System.out.print(a + " ");
+            b--;
+        } while (b > 0);
+
+        /*int i = 0;
         if (a > 0 && b > 0) {
             do {
-                System.out.print(a + ", ");
+                System.out.print(a + " ");//сделает одну строчку все -равно даже если в==100
                 i++;
             } while (i < b);
-        }
+        }*/
+        /*int i = 0;
+        while (i < b) {
+            System.out.print(a + " , и на шаге - " + i);
+            i = i + 1;
+            //i++;
+            System.out.println();
+        }*/
     }
 }

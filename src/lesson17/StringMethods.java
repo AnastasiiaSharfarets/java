@@ -2,7 +2,7 @@ package lesson17;
 
 public class StringMethods {
     public static void main(String[] args) {
-        System.out.println(StringMethods9("java"));
+        System.out.println(StringMethods4("java"));
     }
 
     public static char StringMethods1(String str) {
