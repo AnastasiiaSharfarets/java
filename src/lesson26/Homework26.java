@@ -13,6 +13,7 @@ public class Homework26 {
         System.out.println(bobThere("abcbob"));// →true
         System.out.println(bobThere("b9b"));// →true
         System.out.println(bobThere("bac"));// →false
+        System.out.println(bobThere("lkflskgslbab"));// →true
     }
 
     private static boolean bobThere(String str1) {
