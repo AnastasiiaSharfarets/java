@@ -28,7 +28,37 @@ public class Homework27 {
         System.out.println(countHi("abc hi ho"));// →1
         System.out.println(countHi("ABChi hi"));// →2
         System.out.println(countHi("hihi"));// →2
+        System.out.println("starOut2 - решение №2");
+        System.out.println(starOut2("ab*cd"));//→"ad"
+        System.out.println(starOut2("ab**cd"));// →"ad"
+        System.out.println(starOut2("sm*eilly"));// →"silly"
+        System.out.println(starOut2("sm*eil*ly*"));// →"si"*/
+        System.out.println(starOut3("ab*cd"));//→"ad"
+        System.out.println(starOut3("ab**cd"));// →"ad"
+        System.out.println(starOut3("sm*eilly"));// →"silly"
+        System.out.println(starOut3("*sm*eil*ly*"));// →"i"
+        System.out.println(starOut3("a"));// →"a"
+        System.out.println(starOut3(""));// →""
 
+    }
+
+    private static String starOut3(String input) {
+        String output = "";
+        char star = '*';
+        if (input.charAt(0) != star && input.charAt(1) != star) {
+            output += input.charAt(0);
+        }
+        for (int i = 1; i < input.length() - 1; i++) {
+            if (input.charAt(i) != star && input.charAt(i - 1) != star
+                    && input.charAt(i + 1) != star) {
+                output += input.charAt(i);
+            }
+        }
+        if (input.charAt(input.length() - 1) != star && input.charAt(input.length()-2) != star) {
+            output += input.charAt(input.length() - 1);
+        }
+
+        return output;
     }
 
     private static int countHi(String str) {
@@ -37,12 +67,12 @@ public class Homework27 {
             if (str.charAt(i) == 'h' && str.charAt(i + 1) == 'i')
                 //if (str.substring(i, i+2).equals("hi")) count++;
                 count++;
-
         }
         return count;
     }
 
     private static String starOut(String str) {
+        //return str.substring(0, str.indexOf("*") - 1) + str.substring(str.lastIndexOf("*") + 2);
         char star = '*';
         String result = "";
         for (int i = 1; i < str.length() - 1; i++) {
@@ -53,6 +83,21 @@ public class Homework27 {
             }
         }
         return result;
+    }
+
+    private static String starOut2(String str) {
+        int len = str.length();
+        String finalString = "";
+        for (int i = 0; i < len; i++) {
+            if (i == 0 && str.charAt(i) != '*')
+                finalString += str.charAt(i);
+            if (i > 0 && str.charAt(i) != '*' && str.charAt(i - 1) != '*')
+                finalString += str.charAt(i);
+            if (i > 0 && str.charAt(i) == '*' && str.charAt(i - 1) != '*')
+
+                finalString = finalString.substring(0, finalString.length() - 1);
+        }
+        return finalString;
     }
 
     private static int loneSum(int a, int b, int c) {
@@ -73,7 +118,10 @@ public class Homework27 {
     }
 
     private static int blackjack(int a, int b) {
-        if (a <= 21 && a > b) {
+        if (a > 21) a = 0;
+        if (b > 21) b = 0;
+        return Math.max(a, b);
+        /*if (a <= 21 && a > b) {
             return a;
         }
         if (b <= 21 && b > a) {
@@ -88,6 +136,6 @@ public class Homework27 {
         if (a > 21 && b > 21) {
             return 0;
         }
-        return a;
+        return a;*/
     }
 }

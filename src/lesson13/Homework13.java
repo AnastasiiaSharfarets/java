@@ -2,9 +2,7 @@ package lesson13;
 
 import lesson12.MyColor;
 
-import java.util.Spliterator;
-
-public class Homework13<lastLetterB> {
+public class Homework13 {
     public static void main(String[] args) {
         //You have a red lottery ticket showing ints a, b, and c,
         // each of which is 0, 1, or 2. If they are all the value 2, the result is 10.
@@ -30,7 +28,6 @@ public class Homework13<lastLetterB> {
         System.out.println(lastChars2("jhjjk", "jghd"));
         split();
         System.out.println(finalPriceWindowsDoors2(0.2, 0.9, 4, 3));
-
     }
 
     private static double finalPriceWindowsDoors(double a, double b, int numberWindows, int numberDoors) {
@@ -53,7 +50,7 @@ public class Homework13<lastLetterB> {
         double frameWindowsPrice = 100.00;
         double perimeter = (a + b) * 2;
         double area = a * b;
-        return  numberWindows*(perimeter*frameWindowsPrice +area* windowsMeterPrice);
+        return numberWindows * (perimeter * frameWindowsPrice + area * windowsMeterPrice);
     }
 
     private static double doorsPrice(int numberDoors) {
