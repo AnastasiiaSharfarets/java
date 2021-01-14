@@ -24,6 +24,11 @@ public class Homework28 {
         System.out.println(endOther("Hiabc", "abc"));// →true
         System.out.println(endOther("AbC", "HiaBc"));// →true
         System.out.println(endOther("abc", "abXabc"));// →true
+        System.out.println("Решение №2");
+        System.out.println(endOther2("Hiabc", "abc"));// →true
+        System.out.println(endOther2("AbC", "HiaBc"));// →true
+        System.out.println(endOther2("abc", "abXabc"));// →true
+        System.out.println(endOther2("abc", "abXabcd"));// →false
 
         //Ex.19. Arrays01. Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
         System.out.println("Ex19. Arrays01");
@@ -43,6 +48,13 @@ public class Homework28 {
         String lowStr1 = str1.toLowerCase();
         String lowStr2 = str1.toLowerCase();
         return lowStr1.endsWith(lowStr2) || lowStr2.endsWith(lowStr1);
+    }
+
+    private static boolean endOther2(String word1, String word2) {
+        int minLength = Math.min(word1.length(), word2.length());
+        String etalon = word1.substring(word1.length() - minLength);
+        String etalon2 =word2.substring(word2.length() - minLength);
+        return etalon.equalsIgnoreCase(etalon2);
     }
 
     private static int roundSum(int a, int b, int c) {
