@@ -3,10 +3,10 @@ package lesson18;
 public class MyRound {
     public static void main(String[] args) {
         roundIntro();
-        roundIntro2();
-        roundIntro3();
-        roundIntro4();
-        intToLong();
+        //roundIntro2();
+        //roundIntro3();
+        //roundIntro4();
+        //intToLong();
     }
 
     private static void intToLong() {

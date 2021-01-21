@@ -14,7 +14,7 @@ public class Main {
         System.out.println();
     }
 
-    private static void printArray(int[] input) {
+    public static void printArray(int[] input) {
         System.out.println("Начинаем печатать инт массив");
         System.out.print("Должно быть значение элемента массива ");
         for (int i = 0; i < input.length; i++) {
